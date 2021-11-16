@@ -1,5 +1,8 @@
-com/example/dep/DepTest.class
-com/example/SeleniumSession.class
-com/example/CommonSteps.class
+com/example/steps/CommonSteps.class
+com/example/steps/ShippingPageSteps.class
+com/example/steps/OrdersPageSteps.class
+com/example/util/Utility.class
 com/example/RunCucumberTest.class
-com/example/WebDriverFactory.class
+com/example/util/WebDriverFactory.class
+com/example/util/SeleniumSession.class
+com/example/steps/ProductsPageSteps.class

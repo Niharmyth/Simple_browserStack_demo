@@ -1,5 +1,8 @@
-/Users/jhinni01/Documents/Nihar/Me/Gitlab_repos/simple_browserstack_demo/src/test/java/com/example/SeleniumSession.java
+/Users/jhinni01/Documents/Nihar/Me/Gitlab_repos/simple_browserstack_demo/src/test/java/com/example/steps/OrdersPageSteps.java
+/Users/jhinni01/Documents/Nihar/Me/Gitlab_repos/simple_browserstack_demo/src/test/java/com/example/util/SeleniumSession.java
 /Users/jhinni01/Documents/Nihar/Me/Gitlab_repos/simple_browserstack_demo/src/test/java/com/example/RunCucumberTest.java
-/Users/jhinni01/Documents/Nihar/Me/Gitlab_repos/simple_browserstack_demo/src/test/java/com/example/dep/DepTest.java
-/Users/jhinni01/Documents/Nihar/Me/Gitlab_repos/simple_browserstack_demo/src/test/java/com/example/WebDriverFactory.java
-/Users/jhinni01/Documents/Nihar/Me/Gitlab_repos/simple_browserstack_demo/src/test/java/com/example/CommonSteps.java
+/Users/jhinni01/Documents/Nihar/Me/Gitlab_repos/simple_browserstack_demo/src/test/java/com/example/util/WebDriverFactory.java
+/Users/jhinni01/Documents/Nihar/Me/Gitlab_repos/simple_browserstack_demo/src/test/java/com/example/steps/CommonSteps.java
+/Users/jhinni01/Documents/Nihar/Me/Gitlab_repos/simple_browserstack_demo/src/test/java/com/example/util/Utility.java
+/Users/jhinni01/Documents/Nihar/Me/Gitlab_repos/simple_browserstack_demo/src/test/java/com/example/steps/ProductsPageSteps.java
+/Users/jhinni01/Documents/Nihar/Me/Gitlab_repos/simple_browserstack_demo/src/test/java/com/example/steps/ShippingPageSteps.java

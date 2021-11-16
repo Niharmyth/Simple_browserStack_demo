@@ -1,4 +1,4 @@
-package com.example;
+package com.example.util;
 
 import org.openqa.selenium.WebDriver;
 
@@ -9,7 +9,6 @@ public class SeleniumSession {
     public static void startSession() {
         if (webDriver == null) {
             webDriver = WebDriverFactory.createWebDriver();
-            //$.driver().use(webDriver);
         }
     }
 

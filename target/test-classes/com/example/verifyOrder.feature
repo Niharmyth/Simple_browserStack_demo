@@ -1,6 +1,5 @@
-Feature: whatever
+Feature: BrowserStack
 
-  @Nihar
   Scenario: E2E BrowserStack Scenario
     Given I navigate to Website
     Then I SignIn with username as "demouser" and password as "testingisfun99"
@@ -9,5 +8,5 @@ Feature: whatever
     And I provide shipping details "Nihar", "J", "31 Mesik", "NSW" and "2762"
     And I verify my Order
     And I click on Continue Shopping button
-    And I click on "Orders" link
+    And I click on "orders" link
     Then I should see orders in the list
