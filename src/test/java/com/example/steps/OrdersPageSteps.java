@@ -55,7 +55,7 @@ public class OrdersPageSteps {
         Response response = RestAssured.get(productAPI);
 
         int statusCode = response.getStatusCode();
-        softAssert.assertEquals(statusCode, 200);
+        softAssert.assertEquals(statusCode, 404);
         softAssert.assertAll();
 
         System.err.println("Expected failure here !!!");
