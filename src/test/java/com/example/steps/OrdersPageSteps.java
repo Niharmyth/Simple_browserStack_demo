@@ -7,6 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -36,10 +37,15 @@ public class OrdersPageSteps {
 
     @Then("I should see orders in the list")
     public void iShouldSeeOrdersInTheList() {
-        util.waitForElementToBePresent(By.cssSelector(".shipment"));
+        try {
+            util.waitForElementToBePresent(By.cssSelector(".shipment"));
 
-        List<WebElement> orderItems = webDriver().findElements(By.cssSelector(".orders-listing .order"));
-        Assert.assertEquals(orderItems.size(), 1);
+            List<WebElement> orderItems = webDriver().findElements(By.cssSelector(".orders-listing .order"));
+            Assert.assertEquals(orderItems.size(), 1);
+        } catch (
+                NoSuchElementException e) {
+            throw new AssertionError("There are no orders");
+        }
 
         // Verify API response
         verifyAPIResponse();

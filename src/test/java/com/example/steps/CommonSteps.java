@@ -8,7 +8,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import javax.annotation.Nonnull;
 import java.util.concurrent.TimeUnit;
@@ -45,13 +48,18 @@ public class CommonSteps {
         webDriver().findElement(By.id("login-btn")).click();
 
         util.waitForSpinnerToDisappear();
-        i_should_login_successfully();
+        i_should_login_successfully(username);
     }
 
     @Then("^I should login successfully$")
-    public static void i_should_login_successfully() {
-        By logout = By.cssSelector("a#logout");
-        util.waitForElementToBePresent(logout);
+    public static void i_should_login_successfully(String user) {
+        WebDriverWait wait = new WebDriverWait(webDriver(), 5);
+        try {
+            String loggedInUser = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".username"))).getText();
+            Assert.assertEquals(user, loggedInUser);
+        } catch (NoSuchElementException e) {
+            throw new AssertionError(user + " is not logged in");
+        }
     }
 
     @And("I click on Continue Shopping button")

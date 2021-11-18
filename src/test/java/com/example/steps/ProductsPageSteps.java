@@ -60,7 +60,7 @@ public class ProductsPageSteps {
         Assert.assertEquals(statusCode, 200);
         Assert.assertEquals(expectedResponse, responseStr);
 
-        // Verify the product I'm trying to add exists in the API response
+        // Verify the product, I'm trying to add exists in the API response
         // Very crude way of verifying
         Assert.assertTrue(responseStr.contains("iPhone 11"));
     }
